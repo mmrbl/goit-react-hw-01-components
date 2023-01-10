@@ -1,14 +1,16 @@
-import PropTypes from 'prop-types'
+import { getRandomHexColor } from 'components/utils/getRandomHexColor';
+import PropTypes from 'prop-types';
+import { StaticticsItem, StaticticsItemLabel, StaticticsItemPercentage, StaticticsList } from './Statictics.styled';
 
 export default function StatisticItem({ stats }) {
-  return <ul>
+  return <StaticticsList>
         {stats.map(({ id, label, percentage }) => {
-        return <li key={id}>
-        <span>{label}</span>
-        <span>{percentage}%</span>
-        </li>
+        return <StaticticsItem key={id} bgc = {getRandomHexColor()} >
+        <StaticticsItemLabel>{label}</StaticticsItemLabel>
+        <StaticticsItemPercentage>{percentage}%</StaticticsItemPercentage>
+        </StaticticsItem>
   })}
-  </ul>
+  </StaticticsList>
   
 }
 
