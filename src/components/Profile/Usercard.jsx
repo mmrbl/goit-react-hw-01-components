@@ -1,31 +1,31 @@
 import PropTypes from 'prop-types';
-
+import { Profile, ProfileAvatar, ProfileDescription, ProfileLocation, ProfileName, ProfileStats, ProfileStatsItem, ProfileStatsLabel, ProfileStatsQuantity, ProfileTag } from './Usercard.styled';
 
 export default function Usercard({ username, tag, location, avatar, stats }) {
   return (
-    <div>
-      <div>
-        <img src={avatar} alt={username} className="avatar" />
-        <p>{username}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
-      </div>
+    <Profile>
+      <ProfileDescription>
+        <ProfileAvatar src={avatar} alt={username} className="avatar" />
+        <ProfileName>{username}</ProfileName>
+        <ProfileTag>@{tag}</ProfileTag>
+        <ProfileLocation>{location}</ProfileLocation>
+      </ProfileDescription>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{stats.followers}</span>
-        </li>
-        <li>
-          <span>Views</span>
-          <span>{stats.views}</span>
-        </li>
-        <li>
-          <span>Likes</span>
-          <span>{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <ProfileStats>
+        <ProfileStatsItem>
+          <ProfileStatsLabel>Followers</ProfileStatsLabel>
+          <ProfileStatsQuantity>{stats.followers}</ProfileStatsQuantity>
+        </ProfileStatsItem>
+        <ProfileStatsItem>
+          <ProfileStatsLabel>Views</ProfileStatsLabel>
+          <ProfileStatsQuantity>{stats.views}</ProfileStatsQuantity>
+        </ProfileStatsItem>
+        <ProfileStatsItem>
+          <ProfileStatsLabel>Likes</ProfileStatsLabel>
+          <ProfileStatsQuantity>{stats.likes}</ProfileStatsQuantity>
+        </ProfileStatsItem>
+      </ProfileStats>
+    </Profile>
   );
 }
 

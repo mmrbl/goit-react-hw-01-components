@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 
 export default function StatisticItem({ stats }) {
-  return <ul>{stats.map(({id, label, percentage}) => {
+  return <ul>
+        {stats.map(({ id, label, percentage }) => {
         return <li key={id}>
         <span>{label}</span>
         <span>{percentage}%</span>
@@ -10,7 +11,6 @@ export default function StatisticItem({ stats }) {
   </ul>
   
 }
-
 
 StatisticItem.propTypes = {
   stats: PropTypes.arrayOf(
