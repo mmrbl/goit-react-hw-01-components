@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Profile = styled.div`
-  width: 200px;
+  min-width: 200px;
   border: 2px solid black;
   border-radius: 20px;
   text-align: center;
@@ -49,7 +49,6 @@ export const ProfileStatsItem = styled.li`
   &:not(:last-child){
     border-right: 1px solid grey;
   }
-}
 `;
 
 export const ProfileStatsLabel = styled.span`
