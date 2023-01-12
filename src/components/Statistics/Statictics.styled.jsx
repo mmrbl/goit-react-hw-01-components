@@ -5,6 +5,7 @@ export const StatisticsSection = styled.section`
 text-align: center;
 background-color: #FFF;
 border-radius: 4px;
+margin-right: 20px;
 
 box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 `

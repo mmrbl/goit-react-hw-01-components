@@ -1,13 +1,13 @@
-// import friends from './Friends/friends';
-// import FriendList from './Friends/FriendsList';
+import friends from '../Friends/friends';
+import FriendList from '../Friends/FriendsList';
 import user from '../Profile/user';
 import Usercard from '../Profile/Usercard';
 import data from '../Statistics/data';
 import StatisticItem from '../Statistics/StatisticItem';
 import Statistics from '../Statistics/Statistics';
+import TransactionHistory from "../Transactions/TransactionHistory";
+import transactions from "../Transactions/transactions";
 import { Section } from './App.styled.jsx';
-// import TransactionHistory from "./Transactions/TransactionHistory";
-// import transactions from "./Transactions/transactions";
 
 export default function App() {
   return <Section>
@@ -27,10 +27,10 @@ export default function App() {
     </Statistics> */}
   
 
-    {/* <FriendList friends={friends} />  */}
+    <FriendList friends={friends} /> 
     
    
-    {/* <TransactionHistory items={transactions}/> */}
+    <TransactionHistory items={transactions}/>
   </Section>
   
 };

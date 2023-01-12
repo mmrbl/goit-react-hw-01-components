@@ -1,12 +1,14 @@
 import PropTypes from "prop-types"
+import defaultPerson from '../utils/defaultPerson.png'
+import { FriendAvatar, FriendItem, FriendName, FriendStatus } from "./Friends.styled"
 
-export default function FriendListItem({ avatar, name, isOnline }) {
+export default function FriendListItem({ avatar = defaultPerson, name, isOnline }) {
   return (
-    <li>
-      <span>{isOnline}</span>
-      <img src={avatar} alt={name} />
-      <p>{name}</p>
-    </li>
+    <FriendItem>
+      <FriendStatus bgc={isOnline ? "green" : "red"} >{isOnline}</FriendStatus>
+      <FriendAvatar src={avatar} alt={name} />
+      <FriendName>{name}</FriendName>
+    </FriendItem>
   )
 }
 

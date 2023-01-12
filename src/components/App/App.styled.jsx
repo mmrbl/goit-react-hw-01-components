@@ -5,6 +5,5 @@ export const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-
+  margin: 20px auto;
   `;

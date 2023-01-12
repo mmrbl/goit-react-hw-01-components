@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import defaultPerson from '../utils/defaultPerson.png';
 import { Profile, ProfileAvatar, ProfileDescription, ProfileLocation, ProfileName, ProfileStats, ProfileStatsItem, ProfileStatsLabel, ProfileStatsQuantity, ProfileTag } from './Usercard.styled';
 
-export default function Usercard({ username, tag, location, avatar, stats }) {
+export default function Usercard({ username, tag, location, avatar = defaultPerson, stats }) {
   return (
     <Profile>
       <ProfileDescription>
